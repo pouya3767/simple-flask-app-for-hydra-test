@@ -1,0 +1,35 @@
+<html>
+ 
+<head>
+    <title>flask simple page for hydra test</title>
+    <style>
+        div {
+            width: 400px;
+            border: 1px solid green;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+ 
+<body>
+    {% if is_login %} 
+    	<p>logged in sucessfully</p>
+    {% else %}
+    <div>
+        <h1>Login : </h1> 
+	<br>
+        <form method="POST" action="#">
+            <input type="text"
+                   name="username"
+                   placeholder="Username">
+            <input type="password"
+                   name="password"
+                   placeholder="Password">
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    {% endif %}
+</body>
+ 
+</html>
